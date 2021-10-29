@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(
+    public afDB: AngularFireDatabase
+  ) {}
 
-}
+  // add() {
+  //   this.afDB.list('User/').push({
+  //     pseudo: 'drissas'
+  //   });
+  }
+
+

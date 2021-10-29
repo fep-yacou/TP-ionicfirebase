@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+    <ion-icon routerLink="/profile" name="home-outline" slot="start" class="ion-margin"></ion-icon>
+    <ion-icon routerLink="/search" name="search-outline" slot="end" class="ion-margin"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1 style="text-align: center;"> Vous êtes bien connecté !!!! </h1>
+
+  <ion-list *ngFor="let user of personlist">
+    <ion-item>
+      <ion-label>{{ user.Prenom }} {{ user.Nom }}</ion-label>
+    </ion-item>
+  </ion-list>
+    
+    <ion-button expand="block" color="danger" (click)="logout()">Déconnexion</ion-button>
+</ion-content>

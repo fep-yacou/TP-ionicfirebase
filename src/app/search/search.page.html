@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-searchbar color="tertiary" [(ngModel)]="search"></ion-searchbar>
+  
+  <ion-list *ngFor="let user of personlist | filter:search" >
+    <ion-item>
+      <ion-label>{{ user.Nom }} {{ user.Prenom }}</ion-label>
+    </ion-item>
+   
+  </ion-list>
+
+</ion-content>

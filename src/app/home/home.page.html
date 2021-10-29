@@ -1,20 +1,33 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content>
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title></ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="logo">
+    <ion-icon name="person-circle-outline"></ion-icon>
   </div>
+
+  
+    <ion-button routerLink="/login" color="tertiary" expand="block" shape="round" fill="outline">Connexion</ion-button>
+  
+
+
+    <ion-button routerLink="/register" color="tertiary" expand="block" shape="round">Inscription</ion-button>
+  
+  
+
+    <ion-item lines="none">
+      <ion-button routerLink="/resetpassword" color="tertiary" slot="end" fill="clear">Mot de passe oublié ?</ion-button>
+    </ion-item>
+
+    <div class="gauche">
+      <ion-item lines="none">
+        <ion-button routerLink="/forgotpassword" color="tertiary" fill="clear">Ré-initialisez votre mot de passe</ion-button>
+      </ion-item>
+    </div>
+  
+
 </ion-content>

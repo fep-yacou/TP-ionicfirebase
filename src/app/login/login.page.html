@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="!connected">
+
+    <ion-item >
+      <ion-label color="tertiary">Email</ion-label>
+      <ion-input color="tertiary" type="mail" [(ngModel)]="dataUser.email" placeholder="Adresse email"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="tertiary">Mot de passe</ion-label>
+      <ion-input color="tertiary" type="password" [(ngModel)]="dataUser.password" placeholder="Mot de passe"></ion-input>
+    </ion-item>
+
+    <ion-button color="tertiary" expand="block" shape="round" fill="outline" (click)="login()">Connexion</ion-button>
+  </div>
+
+
+  <ion-item lines="none">
+    <ion-button routerLink="/resetpassword" color="tertiary" slot="end" fill="clear">Mot de passe oublié ?</ion-button>
+  </ion-item>
+</ion-content>
